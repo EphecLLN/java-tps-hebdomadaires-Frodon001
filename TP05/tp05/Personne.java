@@ -1,6 +1,6 @@
 package tp05;
 /**
- * @author florent janssens
+ * @author florent janssenss
  *
  */
 import javax.swing.JOptionPane;

@@ -1,5 +1,8 @@
 package tp06;
-
+/**
+ * @author florent janssens
+ *
+ */
 import javax.swing.JOptionPane;
 
 public class Carre extends Shape {

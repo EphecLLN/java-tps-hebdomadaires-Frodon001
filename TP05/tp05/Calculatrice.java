@@ -1,5 +1,8 @@
 package tp05;
-
+/**
+ * @author florent janssenss
+ *
+ */
 public class Calculatrice {
 	private double valeurCourante;
 

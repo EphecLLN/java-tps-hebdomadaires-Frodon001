@@ -1,6 +1,6 @@
 package tp05;
 /**
- * @author florent janssens
+ * @author florent janssenss
  *
  */
 public class CalculatriceAvecMemoire extends Calculatrice {
