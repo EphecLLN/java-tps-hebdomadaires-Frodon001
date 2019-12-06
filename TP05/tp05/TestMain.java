@@ -1,6 +1,6 @@
 package tp05;
 /**
- * @author florent janssenss
+ * @author florent janssens
  *
  */
 public class TestMain {
