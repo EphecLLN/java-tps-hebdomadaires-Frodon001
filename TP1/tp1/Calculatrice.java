@@ -7,7 +7,7 @@ package tp1;
  */
 public class Calculatrice {
 	
-	double valeurCourante; // Stocke la valeur affichée sur l'écran de la calculatrice
+	double valeurCourante = 0; // Stocke la valeur affichée sur l'écran de la calculatrice
 	
 	/**
 	 * Additionne un nombre à la valeur courante
@@ -36,7 +36,9 @@ public class Calculatrice {
 	 */
 	public static void main(String[] args) {
 		Calculatrice myCalc = new Calculatrice();
+		System.out.println(myCalc.valeurCourante);
 		myCalc.ajoute(5);
+		System.out.println(myCalc.valeurCourante);
 		myCalc.soustrait(2);
 		System.out.println(myCalc.valeurCourante);
 	}
