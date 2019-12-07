@@ -6,5 +6,7 @@
 	<classpathentry kind="src" path="TP06"/>
 	<classpathentry kind="src" path="TP05"/>
 	<classpathentry kind="src" path="TP09"/>
+	<classpathentry kind="src" path="TP03"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
