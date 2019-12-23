@@ -8,6 +8,7 @@
 	<classpathentry kind="src" path="TP09"/>
 	<classpathentry kind="src" path="TP03"/>
 	<classpathentry kind="src" path="TP04"/>
+	<classpathentry kind="src" path="Heritage"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
