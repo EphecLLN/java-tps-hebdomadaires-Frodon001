@@ -7,7 +7,7 @@ package tp1;
  */
 public class Calculatrice {
 	
-	double valeurCourante = 0; // Stocke la valeur affichée sur l'écran de la calculatrice
+	double valeurCourante; // Stocke la valeur affichée sur l'écran de la calculatrice
 	
 	/**
 	 * Additionne un nombre à la valeur courante

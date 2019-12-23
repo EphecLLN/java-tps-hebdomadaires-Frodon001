@@ -14,7 +14,6 @@ public class Calculatrice {
 	 * @param valeurCourante
 	 */
 	public Calculatrice(double valeurCourante) {
-		super();
 		this.valeurCourante = valeurCourante;
 	}
 	/**

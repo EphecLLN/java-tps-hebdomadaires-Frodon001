@@ -3,7 +3,10 @@
  */
 package tp03;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
@@ -113,6 +116,22 @@ public class Etudiant {
 		Etudiant e = new Etudiant("janssens", "florent", "HE201683", new Date(1,1,2000), new int [] {1,2,3,4,5});
 		System.out.println(e);
 		System.out.println(e.moyenne());
+		int [] tableau = new int [] {1,2,3,4,5};
+		System.out.println(tableau[1]);
+		ArrayList<String> cont = new ArrayList<String>();
+		HashMap <Integer, String> hash = new HashMap<Integer, String>();		
+		for(int i = 0; i<tableau.length; i++) {
+			System.out.println("la valeur est : " +tableau[i]);
+		}
+		int i = 0;
+		for(int rep : tableau) {
+			cont.add(Integer.toString(rep));
+			hash.put(i, Integer.toString(rep));
+			System.out.println("dans le foreach : " + cont.get(i));
+			System.out.println("dans le hashMap key : "  + hash.get(i));
+			i++;
+		}
+		
 
 	}
 
