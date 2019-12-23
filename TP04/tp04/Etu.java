@@ -10,6 +10,7 @@ public class Etu {
 		private int matricule;
 		private static int nbEtu = 0;
 		private int [] resultats;
+		private Date date;
 	
 		public Etu() {
 			this.nom = JOptionPane.showInputDialog("Entre le nom de l'étudiant");
@@ -17,6 +18,7 @@ public class Etu {
 			//this.matricule = Integer.parseInt(JOptionPane.showInputDialog("Entre le numéro ID de l'étudiant"));
 			nbEtu++;
 			this.matricule = nbEtu;
+			this.date = new Date(JOptionPane.showInputDialog("Entre la date ")); 
 		}
 		
 		public Etu(String nom, String prenom/*, int matricule*/) {
@@ -69,6 +71,21 @@ public class Etu {
 			this.resultats = resultats;
 		}
 		
+		
+		/**
+		 * @return the date
+		 */
+		public Date getDate() {
+			return date;
+		}
+
+		/**
+		 * @param date the date to set
+		 */
+		public void setDate(Date date) {
+			this.date = date;
+		}
+
 		/**
 		 * divise la somme des résultats par le nombre de resultats 
 		 * @return un double qui correspond a la moyenne
@@ -83,7 +100,7 @@ public class Etu {
 		}
 		
 		public String toString(){
-			return ("Nom: " + this.getNom() + "\nPrénom: " + this.getPrenom() + "\nMatricule: " + this.getMatricule());
+			return ("Nom: " + this.getNom() + "\nPrénom: " + this.getPrenom() + "\nMatricule: " + this.getMatricule() + "\nDate: " + this.getDate());
 		}
 		
 
@@ -106,14 +123,15 @@ public class Etu {
 
 	public static void main(String[] args) {
 		Etu e = new Etu();
-		Etu e2 = new Etu();
-		e2.setMatricule(1);
-		e.setResultats(new int[] {10,10,10,10,10});
-		System.out.println(e.moyenne());
-		System.out.println(e2);
-		System.out.println(e2.equals(e));
-		System.out.println(e2.compareTo(e));
-		System.out.println(e.compareTo(e2));
+		//Etu e2 = new Etu();
+		//e2.setMatricule(1);
+		//e.setResultats(new int[] {10,10,10,10,10});
+		//System.out.println(e.moyenne());
+		//System.out.println(e2);
+		//System.out.println(e2.equals(e));
+		//System.out.println(e2.compareTo(e));
+		//System.out.println(e.compareTo(e2));
+		System.out.println(e);
 		
 
 	}
