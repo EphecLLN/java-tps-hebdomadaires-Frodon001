@@ -1,59 +1,71 @@
+/**
+ * 
+ */
 package tp06;
+/**
+ * @author flore
+ *
+ */
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
-import javax.swing.JOptionPane;
-
-public abstract class Shape implements Affichable, Transformable {
+public abstract class Shape {
+	
 	private int id;
 	private static int cpt = 1;
-	private int x;
-	private int y;
+	private int coordX;
+	private int coordY;
+	
 
-	public Shape(int x, int y) {
-		this.x = x;
-		this.y = y;
+	public Shape(int coordX, int coordY) {
+		super();
 		this.id = cpt;
+		this.coordX = coordX;
+		this.coordY = coordY;
 		cpt++;
 	}
-
-	public Shape() {
-		this.x = Integer.parseInt(JOptionPane.showInputDialog("Entrez x !"));
-		this.y = Integer.parseInt(JOptionPane.showInputDialog("Entrez y !"));
-		this.id = cpt;
-		cpt++;
-	}
-
-	public abstract double surface();
-
-	public abstract double perim();
-
+	
+	public abstract  double surface();
+	
+	public abstract double perimetre();
+	
 	public String getNom() {
 		return (getClass().getSimpleName() + "-" + this.id);
 	}
-
+	
 	public String toString() {
-		NumberFormat nf = new DecimalFormat("#0.00");
 		String temp = "";
 		temp += this.getNom();
-		temp += "\nX: " + this.x + " Y: " + this.y;
-		temp += "\nSurface: " + nf.format(this.surface());
-		temp += "\nPérimètre: " + nf.format(this.perim());
+		temp += "\nX: " + this.coordX + "\nY: " + this.coordY;
+		temp += "\nSurface: " + this.surface();
+		temp += "\nPerimettre: " + this.perimetre();
 		return temp;
 	}
 	
-	public void affiche(){
-		System.out.println(this);
+	public void affiche() {
+		System.out.println(this.getClass().getSimpleName());
 	}
 	
-	public void transforme(int deltaX, int deltaY){
-		this.x = deltaX;
-		this.y = deltaY;
+	public void deplace(int deltaX, int deltaY) {
+		this.coordX = deltaX;
+		this.coordY = deltaY;
 	}
 	
-	public void deplace(int deltaX, int deltaY){
-		this.x = deltaX;
-		this.y = deltaY;
+	public void agrandit(int facteur) {
+		this.coordX *= facteur;
+		this.coordY *= facteur;
 	}
+	
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Carre c = new Carre(2,2,4);
+		System.out.println(c);
+		c.deplace(6, 6);
+		c.agrandit(2);
+		System.out.println(c);
+		
+
+	}
+
 }

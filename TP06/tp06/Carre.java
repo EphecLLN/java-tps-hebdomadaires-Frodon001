@@ -1,21 +1,29 @@
-package tp06;
 /**
- * @author florent janssens
+ * 
+ */
+package tp06;
+
+/**
+ * @author flore
  *
  */
-import javax.swing.JOptionPane;
-
 public class Carre extends Shape {
-	private double cote;
-
-	public Carre(int x, int y, double cote) {
-		super(x, y);
+ 
+	private int cote;
+	private String pointGauche;
+	
+	public Carre(int coordX, int coordY, int cote) {
+		super(coordX,coordY);
+		this.pointGauche = coordX + ";" + coordY;
 		this.cote = cote;
 	}
+	
+	public String getPointGauche() {
+		return pointGauche;
+	}
 
-	public Carre() {
-		super();
-		this.cote = Double.parseDouble(JOptionPane.showInputDialog("Entrez le coté du carré"));
+	public void setPointGauche(int coordX, int coordY) {
+		this.pointGauche = coordX + ";" + coordY;
 	}
 
 	@Override
@@ -24,13 +32,17 @@ public class Carre extends Shape {
 	}
 
 	@Override
-	public double perim() {
+	public double perimetre() {
 		return 4 * this.cote;
 	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Carre c = new Carre(2,2,4);
+		System.out.println(c);
 
-	@Override
-	public void agrandit(int facteur) {
-		this.cote *= facteur;
-		
 	}
+
 }
