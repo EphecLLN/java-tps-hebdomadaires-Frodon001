@@ -9,7 +9,7 @@ public class Ecole {
 		Personne toto = new Etu();
 		toto.setNom("Hazard");
 		toto.setPrenom("Eden");
-		toto.setDateNaissance(LocalDate.of(2000, 10, 10));
+		toto.setNaissance(LocalDate.of(2000, 10, 10));
 		System.out.println(toto);
 		try {
 			toto.setDateArrivee(LocalDate.of(2001, 1, 1));
